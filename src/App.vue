@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { getNode } from '@formkit/core'
+import { changeLocale } from '@formkit/i18n'
 
 type Attributes = {
   strength: number
@@ -128,6 +129,8 @@ onMounted(() => {
       </FormKit>
       <pre wrap>{{ value }}</pre>
     </FormKit>
+
+    <button class="border-2 px-2 py-1 mb-4" @click="changeLocale('fr')">Set to french</button>
   </div>
 </template>
 
